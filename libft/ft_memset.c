@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/07 12:01:10 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/07 12:42:35 by oarnoldo         ###   ########.fr       */
+/*   Created: 2021/10/07 12:30:21 by oarnoldo          #+#    #+#             */
+/*   Updated: 2021/10/07 12:44:41 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,14 @@
 #include <string.h>
 #include <ctype.h>
 
-int	ft_strncmp(const char *str1, const char *str2, size_t count)
+void	*ft_memset(void *str, int c, size_t n)
 {
-	int	i;
+	int				i;
+	unsigned char	*tmp;
 
 	i = 0;
-	while (str1[i] || i < count)
-	{
-		if (str1[i] != str2[i])
-		{
-			if (str1[i] > str2[i])
-			{
-				return (1);
-			}
-			else
-				return (-1);
-		}
-		i++;
-	}
-	return (0);
+	tmp = str;
+	while (tmp[i] && i < n)
+		tmp[i++] = c;
+	return (tmp);
 }
-/*
-int	main(void)
-{
-	int str = strncmp("12312123", "12312123", 5);
-	printf("is - %d, ft - %d", str, ft_strncmp("12312123", "12312123", 5));
-	return (0);
-}
-*/
