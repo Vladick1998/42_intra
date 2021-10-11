@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 12:01:27 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/06 12:26:34 by oarnoldo         ###   ########.fr       */
+/*   Created: 2021/10/06 12:31:15 by oarnoldo          #+#    #+#             */
+/*   Updated: 2021/10/11 16:54:45 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include"../includes/ft_lib.h"
+
+int	ft_tolower(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	if (c >= 'A' && c <= 'Z')
+		return (c - 'A' + 'a');
+	return (c);
 }
 /*
 #include<stdio.h>
 #include<ctype.h>
 int	main(void)
 {
-	printf("is - %d, ft - %d", isalpha('z'), ft_isalpha('z'));
+	printf("is - %d, ft - %d\n", tolower('A'), ft_tolower('A'));
+	printf("is - %d, ft - %d\n", tolower('1'), ft_tolower('1'));
+	printf("is - %d, ft - %d\n", tolower('a'), ft_tolower('a'));
+	printf("is - %d, ft - %d\n", tolower('\0'), ft_tolower('\0'));
 	return (0);
 }
 */
