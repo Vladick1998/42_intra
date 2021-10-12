@@ -1,5 +1,4 @@
 
-
 SRC = ft_bzero.c\
 	ft_isalnum.c\
 	ft_isalpha.c\
@@ -12,13 +11,14 @@ SRC = ft_bzero.c\
 	ft_strlen.c\
 	ft_strncmp.c\
 	ft_tolower.c\
-	ft_toupper.c
+	ft_toupper.c\
+	ft_memmove.c
 
 OBJ = ${patsubst %.c,%.o,${SRC}}
 
 D_FILES = ${patsubst %.c,%.d,$(SRC)}
 
-NAME = libft
+NAME = libft.a
 CC = gcc
 GFLAGS = -Wall -Wextra -Werror
 
