@@ -6,7 +6,7 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 11:28:36 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/12 20:43:00 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/12 20:47:17 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ size_t	ft_stelen(const char *str)
 {
 	size_t	len;
 
+	len = 0;
 	while (str)
 		len++;
 	return (len);

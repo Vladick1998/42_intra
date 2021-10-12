@@ -6,7 +6,7 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 11:06:36 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/12 20:43:00 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/12 21:03:12 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 char	*ft_strchr(char *str, int c)
 {
-	while (str)
+	if (c == '\0')
+		return (str);
+	while (str != '\0')
 	{
 		if (str[0] == c)
 		{
@@ -22,8 +24,5 @@ char	*ft_strchr(char *str, int c)
 		}
 		str++;
 	}
-	if (c == '\0')
-		return (str);
-	else
-		return (NULL);
+	return (NULL);
 }

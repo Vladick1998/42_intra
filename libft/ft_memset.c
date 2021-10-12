@@ -6,7 +6,7 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 12:30:21 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/12 20:43:00 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/12 20:45:41 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *str, int c, size_t n)
 
 	i = 0;
 	tmp = str;
-	while (tmp[i] && i < n)
+	while (n--)
 		tmp[i++] = c;
 	return (tmp);
 }

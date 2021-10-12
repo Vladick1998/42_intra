@@ -6,7 +6,7 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 14:53:21 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/11 16:52:03 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/12 21:09:42 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
 void	*ft_memcpy(void *destination, const void *source, size_t n);
+void	*ft_memmove(void *destination, const void *source, size_t n);
 void	*ft_memset(void *str, int c, size_t n);
 char	*ft_strchr(char *str, int c);
 size_t	ft_stelen(const char *str);
