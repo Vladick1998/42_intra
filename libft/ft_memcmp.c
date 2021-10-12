@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/12 19:44:06 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/12 21:27:44 by oarnoldo         ###   ########.fr       */
+/*   Created: 2021/10/12 21:47:27 by oarnoldo          #+#    #+#             */
+/*   Updated: 2021/10/12 21:52:15 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ft_lib.h"
 
-void	*ft_memmove(void *destination, const void *source, size_t len)
+int	ft_memcmp(const void *buf1, const void *buf2, size_t count)
 {
-	unsigned char	*d;
-	unsigned char	*s;
+	unsigned char	*b1;
+	unsigned char	*b2;
 
-	d = (unsigned char *)destination;
-	s = (unsigned char *)source;
-	if (d < s)
-		while (len--)
-			*d++ = *s++;
-	else
+	b1 = (unsigned char *) buf1;
+	b2 = (unsigned char *) buf2;
+	while (count--)
 	{
-		d += len;
-		s += len;
-		while (len--)
-			*--d = *--s;
+		if (*b1 != *b2)
+		{
+			return (*b1 - *b2);
+		}
+		b1++;
+		b2++;
 	}
-	return (destination);
+	return (0);
 }

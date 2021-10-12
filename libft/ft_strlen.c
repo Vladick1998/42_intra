@@ -6,18 +6,18 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 11:28:36 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/12 20:47:17 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/12 21:54:14 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ft_lib.h"
 
-size_t	ft_stelen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	len;
 
 	len = 0;
-	while (str)
+	while (str[len] != '\0')
 		len++;
 	return (len);
 }
