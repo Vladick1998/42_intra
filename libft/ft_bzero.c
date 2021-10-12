@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/07 11:28:36 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/11 16:58:40 by oarnoldo         ###   ########.fr       */
+/*   Created: 2021/10/11 14:48:48 by oarnoldo          #+#    #+#             */
+/*   Updated: 2021/10/12 20:40:01 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../includes/ft_lib.h"
+#include"ft_lib.h"
 
-size_t	ft_stelen(const char *str)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t	len;
-
-	while (str)
-		len++;
-	return (len);
+	ft_memset(s, '\0', n);
 }
