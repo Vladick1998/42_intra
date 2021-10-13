@@ -1,39 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 15:57:16 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/13 16:36:14 by oarnoldo         ###   ########.fr       */
+/*   Created: 2021/10/13 17:18:54 by oarnoldo          #+#    #+#             */
+/*   Updated: 2021/10/13 17:24:24 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ft_lib.h"
 
-char	*ft_strnstr(const char *dest, const char *src, size_t len)
+void	*ft_calloc(size_t number, size_t size)
 {
-	char	*h;
-	size_t	srclen;
-	size_t	q;
-	size_t	i;
+	char	*res;
 
-	h = (char *)dest;
-	srclen = ft_strlen(src);
-	if (!srclen)
-		return (h);
-	if (ft_strlen(dest) < srclen || len < srclen)
-		return (NULL);
-	i = 0;
-	while (h[i] && i <= len - srclen)
-	{
-		q = 0;
-		while (src[q] && src[q] == h[i + q])
-			q++;
-		if (q == srclen)
-			return (&h[i]);
-		i++;
-	}
-	return (NULL);
+	res = malloc(number * size);
+	if (res)
+		ft_memset(res, 0, number * size);
+	return (res);
 }

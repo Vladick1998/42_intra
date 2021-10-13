@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 15:57:16 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/13 16:36:14 by oarnoldo         ###   ########.fr       */
+/*   Created: 2021/10/13 16:16:16 by oarnoldo          #+#    #+#             */
+/*   Updated: 2021/10/13 17:01:47 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ft_lib.h"
 
-char	*ft_strnstr(const char *dest, const char *src, size_t len)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	char	*h;
-	size_t	srclen;
-	size_t	q;
-	size_t	i;
+	size_t		i;
+	size_t		t1;
+	size_t		t2;
 
-	h = (char *)dest;
-	srclen = ft_strlen(src);
-	if (!srclen)
-		return (h);
-	if (ft_strlen(dest) < srclen || len < srclen)
-		return (NULL);
 	i = 0;
-	while (h[i] && i <= len - srclen)
+	t1 = ft_strlen(dst);
+	t2 = ft_strlen(src);
+	if (size - 1 <= t1)
+		return (t2 + size);
+	while (t1 + i < size - 1)
 	{
-		q = 0;
-		while (src[q] && src[q] == h[i + q])
-			q++;
-		if (q == srclen)
-			return (&h[i]);
+		dst[t1 + i] = src[i];
 		i++;
 	}
-	return (NULL);
+	dst[t1 + i] = '\0';
+	return (t1 + t2);
 }
