@@ -42,4 +42,6 @@ int		ft_strncmp(const char *str1, const char *str2, size_t count);
 char	*ft_strnstr(const char *dest, const char *src, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+
+char *ft_substr(char const *s, unsigned int start, size_t len);
 #endif
