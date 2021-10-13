@@ -14,7 +14,9 @@ SRC = ft_bzero.c\
 	ft_toupper.c\
 	ft_memmove.c\
 	ft_memchr.c\
-	ft_memcmp.c
+	ft_memcmp.c\
+	ft_strlcpy.c\
+	ft_strnstr.c
 
 OBJ = ${patsubst %.c,%.o,${SRC}}
 
