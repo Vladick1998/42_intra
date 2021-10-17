@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/16 14:07:42 by marvin            #+#    #+#             */
-/*   Updated: 2021/10/16 14:07:42 by marvin           ###   ########.fr       */
+/*   Created: 2021/10/17 01:25:21 by oarnoldo          #+#    #+#             */
+/*   Updated: 2021/10/17 02:56:32 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_lib.h"
+#include"libft.h"
 
-static int
-	ft_abs(int nbr)
+static int	ft_neg(int nbr)
 {
-	return ((nbr < 0) ? -nbr : nbr);
+	if (nbr < 0)
+		return (-nbr);
+	return (nbr);
 }
 
-void
-	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	char	str[13];
 	int		is_neg;
@@ -32,7 +32,7 @@ void
 	length = 0;
 	while (n != 0)
 	{
-		str[length++] = '0' + ft_abs(n % 10);
+		str[length++] = '0' + ft_neg(n % 10);
 		n = (n / 10);
 	}
 	if (is_neg)

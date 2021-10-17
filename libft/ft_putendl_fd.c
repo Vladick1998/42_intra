@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/16 14:05:17 by marvin            #+#    #+#             */
-/*   Updated: 2021/10/17 00:34:35 by oarnoldo         ###   ########.fr       */
+/*   Created: 2021/10/17 01:25:14 by oarnoldo          #+#    #+#             */
+/*   Updated: 2021/10/17 02:34:28 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	char	nl;
-
-	nl = '\0';
-	write(fd, s, ft_strlen(s));
-	write(fd, &nl, 1);
+	if (s != NULL)
+	{
+		ft_putstr_fd(s, fd);
+		ft_putchar_fd('\n', fd);
+	}
 }

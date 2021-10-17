@@ -3,56 +3,47 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/16 13:32:11 by marvin            #+#    #+#             */
-/*   Updated: 2021/10/16 13:32:11 by marvin           ###   ########.fr       */
+/*   Created: 2021/10/17 02:55:54 by oarnoldo          #+#    #+#             */
+/*   Updated: 2021/10/17 02:55:56 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_lib.h"
+#include"libft.h"
 
-static int	ft_abs(int nbr)
+long	ft_neg(long nbr)
 {
-	return ((nbr < 0) ? -nbr : nbr);
-}
-
-static void	ft_strrev(char *str)
-{
-	size_t	length;
-	size_t	i;
-	char	tmp;
-
-	length = ft_strlen(str);
-	i = 0;
-	while (i < length / 2)
-	{
-		tmp = str[i];
-		str[i] = str[length - i - 1];
-		str[length - i - 1] = tmp;
-		i++;
-	}
+	if (nbr < 0)
+		return (-nbr);
+	return (nbr);
 }
 
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int		is_neg;
-	size_t	length;
+	long	nbr;
+	size_t	size;
 
-	is_neg = (n < 0);
-	if (!(str = ft_calloc(11 + is_neg, sizeof(*str))))
-		return (NULL);
-	if (n == 0)
-		str[0] = '0';
-	length = 0;
-	while (n != 0)
+	nbr = n;
+	nbr = ft_neg(nbr);
+	size = 1;
+	if (n > 0)
+		size = 0;
+	while (n && size++ >= 0)
+		n /= 10;
+	str = (char *)malloc(size + 1);
+	if (!str)
+		return (0);
+	*(str + size--) = '\0';
+	while (nbr > 0)
 	{
-		str[length++] = '0' + ft_abs(n % 10);
-		n = (n / 10);
+		*(str + size--) = nbr % 10 + '0';
+		nbr /= 10;
 	}
-	if (is_neg)
-		str[length] = '-';
-	ft_strrev(str);
+	if (size == 0 && str[1] == '\0')
+		*(str + size) = '0';
+	else if (size == 0 && str[1] != '\0')
+		*(str + size) = '-';
 	return (str);
 }
