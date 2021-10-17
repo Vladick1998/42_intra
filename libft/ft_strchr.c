@@ -6,11 +6,11 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 11:06:36 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/12 21:03:12 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/17 00:34:35 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_lib.h"
+#include"libft.h"
 
 char	*ft_strchr(char *str, int c)
 {

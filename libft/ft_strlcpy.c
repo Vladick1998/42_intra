@@ -6,11 +6,11 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 15:41:08 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/13 15:56:00 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/17 00:34:35 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_lib.h"
+#include"libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

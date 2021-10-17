@@ -6,11 +6,11 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 16:48:58 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/13 17:28:47 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/17 00:34:35 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_lib.h"
+#include"libft.h"
 
 int	ft_atoi(const char *str)
 {
