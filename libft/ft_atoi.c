@@ -6,32 +6,34 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 16:48:58 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/13 17:28:47 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/17 02:47:12 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_lib.h"
+#include"libft.h"
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	neg;
-	int	res;
+	int				i;
+	long long int	neg;
+	long long int	res;
 
 	i = 0;
 	neg = 1;
 	res = 0;
-	while (str[i] == '\t' || str[i] == '\n'
-		|| str[i] == '\v' || str[i] == '\f'
-		|| str[i] == '\r' || str[i] == ' ')
+	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
+		||str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
-		if (str[i++] == '-')
-			neg *= -1;
+	{
+		if (str[i] == '-')
+			neg = -1;
+		i++;
+	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res *= 10;
-		res += str[i++] - '0';
+		res = (res * 10) + (long long int)(str[i] - '0');
+		i++;
 	}
 	return (res * neg);
 }

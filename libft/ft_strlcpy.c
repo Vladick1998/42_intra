@@ -6,22 +6,27 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 15:41:08 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/13 15:56:00 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/17 01:11:12 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_lib.h"
+#include"libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
+	size_t	srclen;
 	size_t	i;
 
+	srclen = ft_strlen(src);
 	i = 0;
-	while (i < size && src[i] != '\0')
+	if (dstsize != 0)
 	{
-		dst[i] = src[i];
-		i++;
+		while (src[i] != '\0' && i < (dstsize - 1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	dst[i] = '\0';
-	return (ft_strlen(src));
+	return (srclen);
 }

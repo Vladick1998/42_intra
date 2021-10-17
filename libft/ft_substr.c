@@ -5,31 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/14 02:23:41 by marvin            #+#    #+#             */
-/*   Updated: 2021/10/15 17:29:28 by oarnoldo         ###   ########.fr       */
+/*   Created: 2021/10/17 01:33:25 by oarnoldo          #+#    #+#             */
+/*   Updated: 2021/10/17 02:58:54 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_lib.h"
+#include"libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
-	int		i;
-	int		q;
+	size_t	i;
+	size_t	q;
 
-	i = 0;
-	q = 0;
-	str = malloc(sizeof(char *) * (len + 1));
+	if (!s)
+		return (NULL);
+	str = (char *)malloc(len + 1);
 	if (!str)
 		return (NULL);
-	while (s[i])
+	i = start;
+	q = 0;
+	while (s[i] && q < len && i < ft_strlen(s))
 	{
-		if (s[i] >= start && q < len)
-		{
-			str[q] = s[i];
-			q++;
-		}
+		str[q] = s[i];
+		q++;
 		i++;
 	}
 	str[q] = '\0';
