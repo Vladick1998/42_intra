@@ -6,10 +6,13 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 02:50:12 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/17 02:50:14 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/18 16:31:05 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	удаляет символы в начале и конце строки s1 символы берутся из set
+*/
 #include"libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)

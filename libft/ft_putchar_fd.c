@@ -6,10 +6,13 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 01:25:05 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/17 03:12:50 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/18 17:32:39 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+
+*/
 #include"libft.h"
 
 void	ft_putchar_fd(char c, int fd)

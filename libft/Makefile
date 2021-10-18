@@ -30,7 +30,6 @@ ${NAME}: ${OBJ}
 
 include ${wildcard ${D_FILES}}
 
-
 clean:
 	rm -f ${OBJ} ${D_FILES}
 

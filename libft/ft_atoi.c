@@ -6,10 +6,13 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 16:48:58 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/17 02:47:12 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/18 15:51:48 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	str parse to int
+*/
 #include"libft.h"
 
 int	ft_atoi(const char *str)

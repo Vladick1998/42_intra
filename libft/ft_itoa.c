@@ -6,10 +6,13 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 02:55:54 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/17 02:55:56 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/18 17:32:39 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	парсит int to str
+*/
 #include"libft.h"
 
 long	ft_neg(long nbr)

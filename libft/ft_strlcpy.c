@@ -6,10 +6,14 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 15:41:08 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/17 01:11:12 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/18 17:32:39 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	копирует в dst строку src количество символов dstsize
+	и ставит в конец \0
+*/
 #include"libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)

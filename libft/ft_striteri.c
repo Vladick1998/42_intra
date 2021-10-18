@@ -6,10 +6,13 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 01:56:09 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/17 02:56:46 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/18 17:32:39 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	применяет к всем символам в строке s метод f
+*/
 #include"libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
@@ -21,7 +24,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (s[i])
 	{
-		f(i, s + i);
+		f(i, &s[i]);
 		i++;
 	}
 }

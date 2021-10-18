@@ -6,10 +6,13 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 19:44:06 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/17 01:12:04 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/18 16:04:38 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	заменяет кусок памяти в destination куском памяти из source
+*/
 #include"libft.h"
 
 void	*ft_memmove(void *destination, const void *source, size_t len)
