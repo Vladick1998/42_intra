@@ -6,7 +6,7 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 01:25:33 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/18 17:35:05 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/19 16:32:41 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,12 @@ static int	write_split(char **split, const char *str, char charset)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if ((str[i] == charset || str[i] == '\0') == 1)
+		if (str[i] == charset || str[i] == '\0')
 			i++;
 		else
 		{
 			j = 0;
-			while ((str[i + j] == charset || str[i + j] == '\0') == 0)
+			while (str[i + j] != charset && str[i + j] != '\0')
 				j++;
 			split[word] = (char *)malloc(sizeof(char) * (j + 1));
 			if (!split[word])

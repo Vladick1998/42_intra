@@ -6,7 +6,7 @@
 /*   By: oarnoldo <oarnoldo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 01:33:25 by oarnoldo          #+#    #+#             */
-/*   Updated: 2021/10/17 02:58:54 by oarnoldo         ###   ########.fr       */
+/*   Updated: 2021/10/19 16:39:44 by oarnoldo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	str = (char *)malloc(len + 1);
+	str = (char *)malloc(sizeof(*s) * (len + 1));
 	if (!str)
 		return (NULL);
 	i = start;
